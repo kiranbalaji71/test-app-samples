@@ -1,0 +1,141 @@
+.queryBuilder {
+  // height: 85vh;
+  // overflow: auto;
+  padding: 12px 16px 24px;
+  gap: 16px;
+  border-radius: 5px;
+  // border: 1px solid #f2eced;
+  opacity: 0px;
+  .queryPlacement {
+    display: flex;
+    flex: 1;
+  }
+  .queryNewCondition {
+    position: relative;
+    margin-left: 12px;
+    padding-left: 12px;
+    padding-bottom: 5px;
+    border-left: 1px solid #12289b;
+    &::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 1%;
+      height: 1px;
+      background-color: #12289b;
+    }
+  }
+
+  .queryTop {
+    margin: 10px 0;
+  }
+  .queryGroup {
+    width: 100%;
+    padding: 12px 16px;
+    border-radius: 8px;
+    border: 1px solid #dee3de;
+    background: #fafef8;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+  }
+  .select-attribute {
+    width: 200px;
+  }
+  .select-contains {
+    width: 150px;
+  }
+  .select-value {
+    width: 150px;
+  }
+  .queryFormField {
+    margin-bottom: 8px !important;
+    height: fit-content;
+  }
+
+  .queryFieldInitial {
+    margin-bottom: 0px !important;
+    height: fit-content;
+  }
+  .querySubGroup {
+    width: 100%;
+    padding: 12px 16px;
+    border-radius: 8px;
+    border: 1px solid #dee3de;
+    background: #fefffd;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+  }
+  .queryCondition {
+    margin-bottom: 0px;
+  }
+
+  .queryTag {
+    font-family: sans-serif;
+    width: 42px;
+    background: #fafef8;
+    border: 1px solid #dee3de !important;
+    border-radius: 2px;
+    border: 1px;
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: 600;
+    text-align: center;
+    color: #a19b9d;
+  }
+  .queryHeading {
+    font-family: sans-serif;
+    font-size: 13px;
+    color: #a19b9d;
+  }
+  .queryTypeStatement {
+    margin-top: 5px;
+    font-size: 12px;
+    font-family: sans-serif;
+    color: #a19b9d;
+  }
+  .queryBtn {
+    font-family: sans-serif;
+    color: #231f20;
+    background: #ffffff;
+    transition: all 0.5s ease;
+    position: relative;
+    text-align: center;
+    overflow: hidden;
+    display: inline-block;
+    text-align: center;
+    cursor: pointer;
+
+    .ant-btn-icon {
+      margin-right: 4px;
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(to right, #12289b80, #ffffff8f);
+      transition: all 0.5s ease-in-out;
+      transform: scaleX(0);
+      border-radius: inherit;
+    }
+
+    &:hover::before {
+      left: 100%;
+      transform: scaleX(1);
+    }
+
+    &:hover {
+      color: #12289b !important;
+      border: 1px dashed #12289b !important;
+    }
+
+    span {
+      position: relative;
+      z-index: 1;
+    }
+  }
+}
